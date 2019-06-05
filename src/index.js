@@ -30,7 +30,7 @@ app.get('/user', (req, res)=>{
 });
 
 mongoose.connect(
-  `mongodb+srv://${key.MONGODB_USER}:${key.MONGODB_PASS}@mssgapp01-cyv4g.mongodb.net/test?retryWrites=true`,
+  `mongodb+srv://${key.MONGODB_USER}:${key.MONGODB_PASS}@mssgapp01-cyv4g.mongodb.net/test?retryWrites=true&w=majority`,
   err=> {
     if(!err) {
       const appServer = app.listen(process.env.PORT||8500, ()=>{
